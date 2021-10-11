@@ -1,12 +1,10 @@
 import React from 'react';
 import {connect} from "react-redux";
 
-import Header from "src/components/Header";
-
 import classNames from "src/functions/classNames";
 import {addToCart} from "src/store/cart/actions";
 
-import {CartReducerInterface} from "src/store/cart/reducers";
+import {CartItem, CartReducerInterface} from "src/store/cart/reducers";
 
 import style from "./index.module.scss";
 
@@ -52,16 +50,10 @@ interface IProps extends CartReducerInterface {}
 
 interface IState {
   search: string,
-  items: Array<{
-    id: number,
-    name: string,
-    description: string,
-    img: string,
-    price: number
-  }>
+  items: Array<CartItem>
 }
 
-export class Index extends React.Component<any, any> {
+export class Index extends React.Component<IProps, IState> {
   public searchTimeout;
 
   constructor(props) {

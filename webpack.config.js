@@ -69,9 +69,6 @@ module.exports = {
         use: [
           'style-loader',
           {
-            loader: require.resolve('css-modules-typescript-loader')
-          },
-          {
             loader: require.resolve('css-loader'),
             options: {
               importLoaders: 1,

@@ -4,9 +4,17 @@ import {
   CLEAR_CART
 } from './actions';
 
+export interface CartItem {
+  id: number,
+  name: string,
+  description: string,
+  img: string,
+  price: number
+}
+
 export interface CartReducerInterface {
   cart?: {
-    array: []
+    array: Array<CartItem>
   },
   addToCart?(item),
   removeFromCart?(index),

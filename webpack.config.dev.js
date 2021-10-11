@@ -14,6 +14,10 @@ module.exports = {
     path: path.resolve(__dirname, '/www')
   },
   devServer: {
+    port: 10888,
+    contentBase: ['./src', './www'], // both src and output dirs
+    inline: true,
+    hot: true,
     historyApiFallback: true
   },
   devtool: 'eval-cheap-source-map',
