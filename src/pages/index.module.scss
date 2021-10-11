@@ -9,14 +9,6 @@
 
   color: #fff;
 
-  .title {
-    margin-bottom: 20px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
   .sectionInner {
     display: grid;
     align-items: flex-start;
@@ -32,6 +24,14 @@
         width: 100% !important;
 
         text-align: center;
+
+        .title {
+          margin-bottom: 20px;
+
+          font-family: 'Montserrat', sans-serif;
+          font-size: 18px;
+          font-weight: bold;
+        }
 
         .description {
           align-self: center !important;
@@ -88,13 +88,14 @@
           outline: none;
           border-radius: 9px;
 
-          cursor: pointer;
           transition: .2s ease-in-out;
 
           color: #FFFFFF;
           background: #212121;
 
           &:not(:disabled) {
+            cursor: pointer;
+
             &:hover {
               opacity: .7;
             }

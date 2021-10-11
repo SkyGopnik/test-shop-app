@@ -128,7 +128,6 @@ export class Index extends React.Component<IProps, IState> {
     return(
       <section className={style.section}>
         <div className={style.container}>
-          <div className={style.title}>Продукты</div>
           <div className={style.sectionInner}>
             <div className={style.list}>
               {items.length !== 0 ? (
