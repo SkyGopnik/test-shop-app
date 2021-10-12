@@ -11,6 +11,7 @@ import {
 
 import 'src/style/index.scss';
 
+import App from "src/components/App";
 import Header from "src/components/Header";
 
 // Главный файл
@@ -30,10 +31,12 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Header />
-      <Switch>
-        <Route path="/" component={Index} exact />
-        <Route path="/cart" component={Cart} />
-      </Switch>
+      <App>
+        <Switch>
+          <Route path="/" component={Index} exact />
+          <Route path="/cart" component={Cart} />
+        </Switch>
+      </App>
     </Router>
   </Provider>,
   root
