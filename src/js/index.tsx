@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route, Redirect
 } from "react-router-dom";
 
 import 'src/style/index.scss';
@@ -31,12 +31,11 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <Header />
-      <App>
-        <Switch>
-          <Route path="/" component={Index} exact />
-          <Route path="/cart" component={Cart} />
-        </Switch>
-      </App>
+      <Switch>
+        <Route path="/" component={Index} exact />
+        <Route path="/cart" component={Cart} />
+        <Redirect to="/" />
+      </Switch>
     </Router>
   </Provider>,
   root
