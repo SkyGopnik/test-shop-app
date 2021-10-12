@@ -11,7 +11,6 @@ import {
 
 import 'src/style/index.scss';
 
-import App from "src/components/App";
 import Header from "src/components/Header";
 
 // Главный файл
